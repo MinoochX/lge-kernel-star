@@ -56,6 +56,17 @@ static unsigned int prev_sched_mc_power_savings = 0;
 static unsigned int prev_sched_smt_power_savings = 0;
 
 /*
+ * sched_domain flag configuration
+ */
+/* TODO add a config flag for this function */
+int arch_sd_sibling_asym_packing(void)
+{
+	if (sched_smt_power_savings || sched_mc_power_savings)
+		return SD_ASYM_PACKING;
+	return 0;
+}
+
+/*
  * default topology function
  */
 const struct cpumask *cpu_coregroup_mask(int cpu)
