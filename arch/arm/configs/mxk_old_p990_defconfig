@@ -544,7 +544,7 @@ CONFIG_ALIGNMENT_TRAP=y
 #
 CONFIG_ZBOOT_ROM_TEXT=0x0
 CONFIG_ZBOOT_ROM_BSS=0x0
-CONFIG_CMDLINE=""
+CONFIG_CMDLINE="loglevel=0 muic_state=1 CRC=10203036179a93 brdrev=1.0 uniqueid=37c7006421f6097 video=tegrafb console=ttyS0,115200n8 usbcore.old_scheme_first=1 tegraboot=sdmmc tegrapart=recovery:35e00:2800:800,linux:34700:1000:800,mbr:400:200:800,system:600:2bc00:800,cache:2c200:8000:800,misc:34200:400:800,userdata:38700:c0000:800   mem=512M@0M vmalloc=128M carveout=96M androidboot.mode=normal androidboot.hardware=star androidboot.serialno=37c7006421f6097"
 # CONFIG_XIP_KERNEL is not set
 # CONFIG_KEXEC is not set
 # CONFIG_CRASH_DUMP is not set
