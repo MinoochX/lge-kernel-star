@@ -43,9 +43,7 @@ static const int core_millivolts[MAX_DVFS_FREQS] =
 	{950, 1000, 1100, 1200, 1225, 1275, 1300};
 
 static const int cpu_millivolts[MAX_DVFS_FREQS] =
-<<<<<<< HEAD
 	{750, 775, 800, 825, 850, 875, 900, 925, 950, 975, 1000, 1025, 1050, 1100, 1125};
-=======
 #ifdef CONFIG_KOWALSKI_OC
 #ifdef CONFIG_KOWALSKI_MAX_OC
 	{
@@ -95,7 +93,6 @@ static const int cpu_millivolts[MAX_DVFS_FREQS] =
 		1125
 	};
 #endif
->>>>>>> 76fb026... MinoochKlok: Initial push for supersaver 164MHz
 
 static const int cpu_speedo_nominal_millivolts[] =
 /* spedo_id  0,    1,    2 */
@@ -207,8 +204,6 @@ static struct dvfs_rail *tegra2_dvfs_rails[] = {
 		.dvfs_rail	= &tegra2_dvfs_rail_vdd_core,	\
 	}
 
-<<<<<<< HEAD
-=======
 #if defined(CONFIG_KOWALSKI_OC) && defined(CONFIG_KOWALSKI_MAX_OC)
 static struct dvfs dvfs_init[] = {
 	CPU_DVFS("cpu", 1, 0, MHZ, 216, 312, 456, 608, 760, 816, 912, 1000, 1100, 1200, 1300, 1404, 1500),

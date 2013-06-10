@@ -2694,8 +2694,6 @@ static struct cpufreq_frequency_table freq_table_1p2GHz[] = {
 	{ 9, CPUFREQ_TABLE_END },
 };
 
-<<<<<<< HEAD
-=======
 #ifdef CONFIG_KOWALSKI_MAX_OC
 static struct cpufreq_frequency_table freq_table_1p5GHz[] = {
 	{ 0, 164000 },
@@ -2713,7 +2711,6 @@ static struct cpufreq_frequency_table freq_table_1p5GHz[] = {
 };
 #endif
 
->>>>>>> 76fb026... MinoochKlok: Initial push for supersaver 164MHz
 static struct tegra_cpufreq_table_data cpufreq_tables[] = {
 	{ freq_table_750MHz, 1, 4 },
 	{ freq_table_1p0GHz, 2, 6 },
