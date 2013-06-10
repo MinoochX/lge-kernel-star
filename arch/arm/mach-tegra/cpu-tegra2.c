@@ -177,8 +177,8 @@ int tegra2_auto_hotplug_init(struct mutex *cpu_lock)
 	top_freq = clk_get_max_rate(cpu_clk)/1200;
 	top_freq = (top_freq * 8)/10;
 
-	/* bottom frequency = 200 MHz */
-	bottom_freq = 200000;
+	/* bottom frequency = 168 MHz */
+	bottom_freq = 168000;
 
 	delay = msecs_to_jiffies(DELAY_MS);
 
