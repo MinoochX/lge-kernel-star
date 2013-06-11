@@ -2670,30 +2670,28 @@ static struct cpufreq_frequency_table freq_table_750MHz[] = {
 };
 
 static struct cpufreq_frequency_table freq_table_1p0GHz[] = {
-	{ 0, 164000 },
-	{ 1, 216000 },
-	{ 2, 312000 },
-	{ 3, 456000 },
-	{ 4, 608000 },
-	{ 5, 760000 },
-	{ 6, 816000 },
-	{ 7, 912000 },
-	{ 8, 1000000 },
-	{ 9, CPUFREQ_TABLE_END },
+	{ 0, 216000 },
+	{ 1, 312000 },
+	{ 2, 456000 },
+	{ 3, 608000 },
+	{ 4, 760000 },
+	{ 5, 816000 },
+	{ 6, 912000 },
+	{ 7, 1000000 },
+	{ 8, CPUFREQ_TABLE_END },
 };
 
 static struct cpufreq_frequency_table freq_table_1p2GHz[] = {
-	{ 0, 164000 },
-	{ 1, 216000 },
-	{ 2, 312000 },
-	{ 3, 456000 },
-	{ 4, 608000 },
-	{ 5, 760000 },
-	{ 6, 816000 },
-	{ 7, 912000 },
-	{ 8, 1000000 },
-	{ 9, 1200000 },
-	{ 10, CPUFREQ_TABLE_END },
+	{ 0, 216000 },
+	{ 1, 312000 },
+	{ 2, 456000 },
+	{ 3, 608000 },
+	{ 4, 760000 },
+	{ 5, 816000 },
+	{ 6, 912000 },
+	{ 7, 1000000 },
+	{ 8, 1200000 },
+	{ 9, CPUFREQ_TABLE_END },
 };
 
 static struct tegra_cpufreq_table_data cpufreq_tables[] = {
@@ -2712,7 +2710,7 @@ struct tegra_cpufreq_table_data *tegra_cpufreq_table_get(void)
 		ret = cpufreq_frequency_table_cpuinfo(
 			&policy, cpufreq_tables[i].freq_table);
 		BUG_ON(ret);
-		if ((policy.max * 1200) == cpu_clk->max_rate)
+		if ((policy.max * 1000) == cpu_clk->max_rate)
 			return &cpufreq_tables[i];
 	}
 	pr_err("%s: No cpufreq table matching cpu range", __func__);
